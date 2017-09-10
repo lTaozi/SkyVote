@@ -1,0 +1,3 @@
+新浪:http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js&ip=218.192.3.42
+
+淘宝：http://ip.taobao.com/service/getIpInfo.php?ip=218.192.3.42

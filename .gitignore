@@ -1,0 +1,13 @@
+# =========================
+# SkyVote投票系统，需要忽略用户上传的图片和表格信息
+# =========================
+
+#用户上传的音频
+VoteAdmin/pages/candidate/audio/*
+!VoteAdmin/pages/candidate/audio/*.txt
+#用户上传的封面和图片
+VoteAdmin/pages/candidate/img/cover/*
+!VoteAdmin/pages/candidate/img/cover/*.txt
+VoteAdmin/pages/candidate/img/img/*
+!VoteAdmin/pages/candidate/img/img/*.txt
+

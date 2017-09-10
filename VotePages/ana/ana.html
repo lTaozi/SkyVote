@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分析数据</title>
+</head>
+<body>
+    <h1>按时间段查询：</h1>
+    <form action="./ana_ip.php" method="get">
+        <input type="hidden" name="type" value="1"></input>
+        <label>选择你需要查询的对象:</label> 
+            <select name="id"> 
+            <option value="1">社会权益法律救助中心</option> 
+            <option value="2">迟学宇</option> 
+            <option value="3">陈安宁</option> 
+            <option value="4">李福有</option> 
+            <option value="5">魏尧</option> 
+            <option value="6">孙文</option> 
+            <option value="7">邹鹏</option> 
+            <option value="8">湘潭大学赴城步县博士服务团</option> 
+            <option value="9">数学与计算科学学院团委学生会社会实践部</option> 
+            <option value="10">黄江红</option> 
+            <option value="11">中国大学生DV文化艺术节组委会</option> 
+            <option value="12">袁亚龙</option> 
+            <option value="13">李玉帅</option> 
+            <option value="14">熊紫鹏</option> 
+            <option value="15">林盛添</option> 
+            <option value="16">曾靖岚</option> 
+            <option value="17">计越佳</option> 
+            <option value="18">崔扬扬</option> 
+            <option value="19">兴湘学院科学技术与创业实践中心</option> 
+            <option value="20">湘潭大学青年传媒中心</option> 
+            <option value="21">Super star 超级明星秀组委会</option> 
+            <option value="22">《湘江法苑》编辑部</option> 
+            <option value="23">13级品牌设计工作室</option> 
+            <option value="24">湘潭大学校友总会学生助理团</option> 
+            <option value="25">湘潭大学学生社团联合会</option> 
+            <option value="26">湘潭大学学生网政中心</option> 
+            <option value="27">湘潭大学学生开放实验室</option> 
+            <option value="28">化工学院青年志愿服务部</option> 
+            <option value="29">王晓玉</option> 
+            <option value="30">旅游管理学院青年志愿者服务队</option> 
+            <option value="31">信息工程学院青年志愿者服务队</option> 
+            <option value="32">湘潭大学学生会青年志愿者服务部</option> 
+            <option value="33">雷锋公司</option> 
+            <option value="34">曾松</option> 
+            <option value="35">新视界传媒工作室</option> 
+            <option value="36">杨桥</option> 
+            <option value="37">蒲松杨</option> 
+            <option value="38">刘硕</option> 
+            <option value="39">设计+</option> 
+        </select>
+        &nbsp;&nbsp;&nbsp;
+        开始时间:<input name="start" type="text" placeholder="2016-11-25 15:00:00"></input>
+        &nbsp;&nbsp;&nbsp;
+        结束时间:<input name="end" type="text" placeholder="2016-11-27 15:00:00"></input>
+        <input type="checkbox" name="echoDetail">是否输出ip投票分布详情</input>
+        <input type="submit"></input>
+    </form>
+    <br/>
+    <h1>按票数段查询：</h1>
+    <form action="./ana_ip.php" method="get"> 
+        <input type="hidden" name="type" value="2"></input>
+        <label>选择你需要查询的对象:</label> 
+            <select name="id"> 
+            <option value="1">社会权益法律救助中心</option> 
+            <option value="2">迟学宇</option> 
+            <option value="3">陈安宁</option> 
+            <option value="4">李福有</option> 
+            <option value="5">魏尧</option> 
+            <option value="6">孙文</option> 
+            <option value="7">邹鹏</option> 
+            <option value="8">湘潭大学赴城步县博士服务团</option> 
+            <option value="9">数学与计算科学学院团委学生会社会实践部</option> 
+            <option value="10">黄江红</option> 
+            <option value="11">中国大学生DV文化艺术节组委会</option> 
+            <option value="12">袁亚龙</option> 
+            <option value="13">李玉帅</option> 
+            <option value="14">熊紫鹏</option> 
+            <option value="15">林盛添</option> 
+            <option value="16">曾靖岚</option> 
+            <option value="17">计越佳</option> 
+            <option value="18">崔扬扬</option> 
+            <option value="19">兴湘学院科学技术与创业实践中心</option> 
+            <option value="20">湘潭大学青年传媒中心</option> 
+            <option value="21">Super star 超级明星秀组委会</option> 
+            <option value="22">《湘江法苑》编辑部</option> 
+            <option value="23">13级品牌设计工作室</option> 
+            <option value="24">湘潭大学校友总会学生助理团</option> 
+            <option value="25">湘潭大学学生社团联合会</option> 
+            <option value="26">湘潭大学学生网政中心</option> 
+            <option value="27">湘潭大学学生开放实验室</option> 
+            <option value="28">化工学院青年志愿服务部</option> 
+            <option value="29">王晓玉</option> 
+            <option value="30">旅游管理学院青年志愿者服务队</option> 
+            <option value="31">信息工程学院青年志愿者服务队</option> 
+            <option value="32">湘潭大学学生会青年志愿者服务部</option> 
+            <option value="33">雷锋公司</option> 
+            <option value="34">曾松</option> 
+            <option value="35">新视界传媒工作室</option> 
+            <option value="36">杨桥</option> 
+            <option value="37">蒲松杨</option> 
+            <option value="38">刘硕</option> 
+            <option value="39">设计+</option> 
+        </select>
+        &nbsp;&nbsp;&nbsp;
+        开始票数:<input name="start" type="text" placeholder="1"></input>
+        &nbsp;&nbsp;&nbsp;
+        结束票数:<input name="end" type="text" placeholder="2876"></input>
+        <input type="checkbox" name="echoDetail">是否输出ip投票分布详情</input>
+        <input type="submit"></input>
+    </form>
+
+    <br/>
+    <br/><br/>
+
+    <h1>查询微信昵称：</h1>
+    <form action="./ana_nickname.php" method="get">
+        <input type="hidden" name="type" value="3"></input>
+        <label>选择你需要查询的对象:</label> 
+            <select name="id"> 
+            <option value="1">社会权益法律救助中心</option> 
+            <option value="2">迟学宇</option> 
+            <option value="3">陈安宁</option> 
+            <option value="4">李福有</option> 
+            <option value="5">魏尧</option> 
+            <option value="6">孙文</option> 
+            <option value="7">邹鹏</option> 
+            <option value="8">湘潭大学赴城步县博士服务团</option> 
+            <option value="9">数学与计算科学学院团委学生会社会实践部</option> 
+            <option value="10">黄江红</option> 
+            <option value="11">中国大学生DV文化艺术节组委会</option> 
+            <option value="12">袁亚龙</option> 
+            <option value="13">李玉帅</option> 
+            <option value="14">熊紫鹏</option> 
+            <option value="15">林盛添</option> 
+            <option value="16">曾靖岚</option> 
+            <option value="17">计越佳</option> 
+            <option value="18">崔扬扬</option> 
+            <option value="19">兴湘学院科学技术与创业实践中心</option> 
+            <option value="20">湘潭大学青年传媒中心</option> 
+            <option value="21">Super star 超级明星秀组委会</option> 
+            <option value="22">《湘江法苑》编辑部</option> 
+            <option value="23">13级品牌设计工作室</option> 
+            <option value="24">湘潭大学校友总会学生助理团</option> 
+            <option value="25">湘潭大学学生社团联合会</option> 
+            <option value="26">湘潭大学学生网政中心</option> 
+            <option value="27">湘潭大学学生开放实验室</option> 
+            <option value="28">化工学院青年志愿服务部</option> 
+            <option value="29">王晓玉</option> 
+            <option value="30">旅游管理学院青年志愿者服务队</option> 
+            <option value="31">信息工程学院青年志愿者服务队</option> 
+            <option value="32">湘潭大学学生会青年志愿者服务部</option> 
+            <option value="33">雷锋公司</option> 
+            <option value="34">曾松</option> 
+            <option value="35">新视界传媒工作室</option> 
+            <option value="36">杨桥</option> 
+            <option value="37">蒲松杨</option> 
+            <option value="38">刘硕</option> 
+            <option value="39">设计+</option> 
+        </select>
+        <input type="submit"></input>
+    </form>
+
+
+    <form action="./ana_hz.php" method="get"> 
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <h1>查询地点和频率（非湘潭和长沙算外地票）</h1>
+        <label>选择你需要查询的对象</label> 
+            <select name="id"> 
+            <option value="1">社会权益法律救助中心</option> 
+            <option value="2">迟学宇</option> 
+            <option value="3">陈安宁</option> 
+            <option value="4">李福有</option> 
+            <option value="5">魏尧</option> 
+            <option value="6">孙文</option> 
+            <option value="7">邹鹏</option> 
+            <option value="8">湘潭大学赴城步县博士服务团</option> 
+            <option value="9">数学与计算科学学院团委学生会社会实践部</option> 
+            <option value="10">黄江红</option> 
+            <option value="11">中国大学生DV文化艺术节组委会</option> 
+            <option value="12">袁亚龙</option> 
+            <option value="13">李玉帅</option> 
+            <option value="14">熊紫鹏</option> 
+            <option value="15">林盛添</option> 
+            <option value="16">曾靖岚</option> 
+            <option value="17">计越佳</option> 
+            <option value="18">崔扬扬</option> 
+            <option value="19">兴湘学院科学技术与创业实践中心</option> 
+            <option value="20">湘潭大学青年传媒中心</option> 
+            <option value="21">Super star 超级明星秀组委会</option> 
+            <option value="22">《湘江法苑》编辑部</option> 
+            <option value="23">13级品牌设计工作室</option> 
+            <option value="24">湘潭大学校友总会学生助理团</option> 
+            <option value="25">湘潭大学学生社团联合会</option> 
+            <option value="26">湘潭大学学生网政中心</option> 
+            <option value="27">湘潭大学学生开放实验室</option> 
+            <option value="28">化工学院青年志愿服务部</option> 
+            <option value="29">王晓玉</option> 
+            <option value="30">旅游管理学院青年志愿者服务队</option> 
+            <option value="31">信息工程学院青年志愿者服务队</option> 
+            <option value="32">湘潭大学学生会青年志愿者服务部</option> 
+            <option value="33">雷锋公司</option> 
+            <option value="34">曾松</option> 
+            <option value="35">新视界传媒工作室</option> 
+            <option value="36">杨桥</option> 
+            <option value="37">蒲松杨</option> 
+            <option value="38">刘硕</option> 
+            <option value="39">设计+</option> 
+        </select> 
+        <input type="submit"></input>
+    </form>
+</body>
+</html>

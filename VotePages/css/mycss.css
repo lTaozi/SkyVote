@@ -1,0 +1,315 @@
+*{
+	text-decoration: none;
+	font-family: "Microsoft Yahei";
+}
+
+html, body{
+	width: 100%;
+	height: 100%;
+}
+
+/*padding的百分比是按照父元素的宽度来的，所以可以使用padding来代替height，实现一个比例不变的盒子*/
+#background{
+	width: 100%;
+	padding-top: 41.841%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+#container{
+	margin: 0 2% 30px 2%;
+	width: 96%;
+	padding-bottom: 20px;
+	background-color: white;
+}
+
+#ac-info{
+	width: 100%;
+	padding: 10px 0;
+}
+
+#can-info{
+	width: 100%;
+}
+
+#username{
+	padding: 0px 1em;
+}
+
+#ac-intro, #ac-rules{
+	padding: 0px 1em;
+}
+
+#ac-intro{
+	font-size: 14px;
+    line-height: 18px;
+}
+
+#ac-rules{
+	font-size: 12px;
+	line-height: 20px;
+}
+
+table{
+	margin: 5px 3%;
+	text-align: center;
+	font-size: 12px;
+	width: 94%;
+	border-top: 1px solid #ECF0F1;
+    border-bottom: 1px solid #ECF0F1;
+}
+
+#ac-search, #ac-btn{
+	width: 96%;
+	padding: 1% 2%;
+}
+
+#search-input{
+	width: 65%;
+	float: left;
+	margin: 0px;
+	padding: 6px 0;
+}
+
+#search-btn{
+	width: 14%;
+	float: right;
+}
+
+#can-list-left{
+	width: 48%;
+	float: left;
+	margin: 0 0.5% 0 1.5%;
+}
+
+#can-list-right{
+	width: 48%;
+	float: right;
+	margin: 0 1.5% 0 0.5%;
+}
+
+.img-block{
+	padding: 0;
+	background-color: #eee;
+	margin-bottom: 20px;
+}
+
+.can-img, .img-btn{
+	width: 100%;
+}
+
+.line{
+	margin: 4px 5px ;
+}
+
+.fliter{
+	width: 21%;
+}
+
+.btn-href{
+	width: 50%;
+	height: 40px;
+	cursor: pointer;
+	color: white;
+	line-height: 40px;
+	background-color: #00BCD4;
+}
+
+.btn-link{
+	width: 50%;
+	height: 40px;
+	cursor: pointer;
+	color: white;
+	line-height: 40px;
+	background-color: #00BCD4;
+}
+
+.btn-vote{
+	width: 50%;
+	height: 40px;
+	cursor: pointer;
+	color: white;
+	line-height: 40px;
+	background-color: #4CAF50;
+}
+
+.img-info{
+	padding: 0 3%;
+	font-size: 12px;
+}
+
+.can-intro{
+	margin: 2px 0;
+}
+
+.p-limit{
+	overflow : hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+
+/*index-srearch*/
+#can-list{
+	width: 94%;
+	float: left;
+	padding: 0 3%;
+}
+
+
+
+/*index-view*/
+#can-topinfo{
+	padding: 10px 15px;
+}
+
+.view-img{
+	width: 94%;
+	margin: 0 3%;
+	margin-bottom: 20px;
+}
+
+#can-name{
+	font-size: 19px;
+	color: #212121;
+}
+
+
+#info-left{
+	width: 80%;
+	float: left;
+}
+
+#info-right{
+	width: 20%;
+	float: left;
+}
+
+#can-btninfo{
+	margin-top: 5px;
+}
+
+#btninfo-votes{
+	margin-right: 5px;
+    padding: .3em .6em;
+    font-size: 12px;
+    border-radius: .25em;
+    float: left;
+    color: #fff;
+    background-color: #4CAF50;
+}
+
+#btninfo-rank{
+	margin-right: 5px;
+    padding: .3em .6em;
+    font-size: 12px;
+    border-radius: .25em;
+    float: left;
+    color: #fff;
+    background-color: #9C27B0;
+}
+
+#btn-vote{
+	float: right;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+#can-declar{
+	padding: 0 15px 15px 15px;
+}
+
+#declar-title{
+	display: inline-block;
+    color: #7F8C8D;
+    font-size: 18px;
+    padding-bottom: 5px;
+    margin: 5px 0;
+    border-bottom: 2px dashed #BDC3C7;
+}
+
+#return-btn{
+	width: 94%;
+	margin: 0 3%;
+}
+
+#footer{
+	margin-top: 20px;
+    font-size: 13px;
+    text-align: center;
+    color: #BDC3C7;
+}
+
+#ques{
+	border-radius: 3px;
+}
+
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 10%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+.overlay p {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
